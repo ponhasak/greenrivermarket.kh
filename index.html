@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCatch | Online Fish & Vegetable Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-fish text-3xl text-blue-600 mr-2"></i>
+                <i class="fas fa-carrot text-2xl text-green-600 mr-2"></i>
+                <h1 class="text-2xl font-bold text-gray-800">Green<span class="text-blue-600">​ River Market</span></h1>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#fish" class="text-gray-700 hover:text-blue-600 font-medium">Fish</a>
+                <a href="#vegetables" class="text-gray-700 hover:text-blue-600 font-medium">Vegetables</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <i class="fas fa-shopping-cart text-2xl text-gray-700 cursor-pointer"></i>
+                    <span class="cart-badge">3</span>
+                </div>
+                <a href="index_km.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 hidden md:block">
+                    <i class="fas fa-language mr-2"></i>ភាសារខ្មែរ
+                </a>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 hidden md:block">
+                    <i class="fas fa-user mr-2"></i>Account
+                </button>               
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700" title="Menu" aria-label="Toggle Menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="flex flex-col space-y-4 p-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#fish" class="text-gray-700 hover:text-blue-600 font-medium">Fish</a>
+                <a href="#vegetables" class="text-gray-700 hover:text-blue-600 font-medium">Vegetables</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    <i class="fas fa-user mr-2"></i>My Account
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Fresh Fish & Vegetables Delivered to Your Door</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">We bring the ocean and farm directly to your kitchen. Quality guaranteed, delivery within 24 hours.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+                    <i class="fas fa-shopping-basket mr-2"></i> Shop Now
+                </button>
+                <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-800 transition duration-300">
+                    <i class="fas fa-play-circle mr-2"></i> How It Works
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose FreshCatch?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-blue-50">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4">
+                        <i class="fas fa-shipping-fast text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Fast Delivery</h3>
+                    <p class="text-gray-600">Get your fresh products delivered within 24 hours of ordering.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-green-50">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-green-600 text-white rounded-full mb-4">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">100% Fresh & Organic</h3>
+                    <p class="text-gray-600">Sourced directly from local fisheries and organic farms.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-yellow-50">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-yellow-600 text-white rounded-full mb-4">
+                        <i class="fas fa-hand-holding-usd text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Best Price Guarantee</h3>
+                    <p class="text-gray-600">We offer the best prices for premium quality products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fish Products Section -->
+    <section id="fish" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800">Fresh Fish</h2>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">View All <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fish Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="fish-bg h-48 flex items-end justify-end p-4">
+                        <span class="bg-red-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Popular</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Salmon Fillet</h3>
+                        <p class="text-gray-600 mb-4">Fresh Atlantic salmon, boneless and skinless</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$24.99/kg</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fish Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-end justify-end p-4">
+                        <span class="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">New</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tuna Steak</h3>
+                        <p class="text-gray-600 mb-4">Premium yellowfin tuna, perfect for grilling</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$32.99/kg</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fish Product 3 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300 flex items-end justify-end p-4"></div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sea Bass</h3>
+                        <p class="text-gray-600 mb-4">Whole sea bass, cleaned and ready to cook</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$18.99/kg</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fish Product 4 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-400 flex items-end justify-end p-4"></div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Prawns</h3>
+                        <p class="text-gray-600 mb-4">Jumbo tiger prawns, peeled and deveined</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-blue-600">$28.99/kg</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vegetables Products Section -->
+    <section id="vegetables" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-800">Fresh Vegetables</h2>
+                <a href="#" class="text-green-600 font-semibold hover:underline">View All <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Vegetable Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="vegetable-bg h-48 flex items-end justify-end p-4">
+                        <span class="bg-red-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Organic</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Organic Tomatoes</h3>
+                        <p class="text-gray-600 mb-4">Fresh organic tomatoes, rich in flavor</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$4.99/kg</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vegetable Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-100 flex items-end justify-end p-4">
+                        <span class="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Local</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bell Peppers</h3>
+                        <p class="text-gray-600 mb-4">Mixed colors: red, yellow, and green</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$6.99/kg</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vegetable Product 3 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200 flex items-end justify-end p-4">
+                        <span class="bg-yellow-500 text-white text-sm font-semibold px-3 py-1 rounded-full">Seasonal</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Broccoli</h3>
+                        <p class="text-gray-600 mb-4">Fresh green broccoli, packed with nutrients</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$3.99/kg</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vegetable Product 4 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300 flex items-end justify-end p-4"></div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Spinach</h3>
+                        <p class="text-gray-600 mb-4">Fresh leafy spinach, perfect for salads</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">$2.99/bunch</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About FreshCatch</h2>
+                    <p class="text-gray-600 mb-4">We are a family-owned business with over 20 years of experience in providing the freshest seafood and vegetables to our community. Our mission is to connect you directly with the best local fisheries and organic farms.</p>
+                    <p class="text-gray-600 mb-6">All our products are sustainably sourced, and we prioritize quality and freshness above all else. We deliver right to your doorstep to ensure you get the best possible ingredients for your meals.</p>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600">20+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600">500+</div>
+                            <div class="text-gray-600">Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-600">10k+</div>
+                            <div class="text-gray-600">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Promise</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Freshness guaranteed or your money back</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Sustainable and ethical sourcing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Direct from source to minimize carbon footprint</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Support for local farmers and fishers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">No preservatives or harmful chemicals</span>
+                            </li>
+                        </ul>
+                        <button class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">
+                            <i class="fas fa-book-open mr-2"></i> Read Our Story
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-fish text-3xl text-blue-400 mr-2"></i>
+                        <i class="fas fa-carrot text-2xl text-green-400 mr-2"></i>
+                        <h2 class="text-2xl font-bold">Fresh<span class="text-blue-400">Catch</span></h2>
+                    </div>
+                    <p class="text-gray-400 mb-4">Your trusted source for fresh fish and vegetables delivered to your door.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#fish" class="text-gray-400 hover:text-white">Fish Products</a></li>
+                        <li><a href="#vegetables" class="text-gray-400 hover:text-white">Vegetables</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">My Account</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Customer Service</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Return & Refund</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">123 Ocean Drive, Seafood City</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">+1 (234) 567-8900</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                            <span class="text-gray-400">info@freshcatch.com</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="font-bold mb-2">Subscribe to Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l-lg text-gray-800 flex-grow">
+                            <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700" title="Subscribe" aria-label="Subscribe to Newsletter">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 FreshCatch. All rights reserved. | Designed with <i class="fas fa-heart text-red-500"></i> for fresh food lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script/script.js"></script>
+</body>
+</html>
