@@ -1,0 +1,391 @@
+* {
+    font-family: 'Battambang', 'Siyamnouvelle', 'Poppins', sans-serif;
+}
+
+html[lang="km"],
+html[lang="km"] * {
+    font-family: 'Battambang', 'Siyamnouvelle', sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Khmer font sizes and weights */
+html[lang="km"] h1,
+html[lang="km"] h2,
+html[lang="km"] h3,
+html[lang="km"] h4,
+html[lang="km"] h5,
+html[lang="km"] h6 {
+    font-family: 'Battambang', 'Siyamnouvelle', sans-serif;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+html[lang="km"] p,
+html[lang="km"] span,
+html[lang="km"] a,
+html[lang="km"] button,
+html[lang="km"] li {
+    font-family: 'Battambang', 'Siyamnouvelle', sans-serif;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== HEADER ===== */
+header {
+    animation: slideInDown 0.6s ease;
+}
+
+header .text-3xl {
+    animation: bounce 2s infinite;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    animation: shimmer 3s infinite;
+    background-size: 1000px 100%;
+}
+
+.hero-bg h2 {
+    animation: slideInUp 0.8s ease 0.2s both;
+}
+
+.hero-bg p {
+    animation: slideInUp 0.8s ease 0.3s both;
+}
+
+.hero-bg .flex {
+    animation: slideInUp 0.8s ease 0.4s both;
+}
+
+/* ===== BACKGROUND IMAGES ===== */
+.vegetable-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1384&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.fish-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== PRODUCT CARDS ===== */
+.product-card {
+    animation: scaleIn 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover h3 {
+    color: #2563eb;
+}
+
+.product-card img,
+.product-card div[class*='bg'] {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover div[class*='bg'] {
+    transform: scale(1.05);
+}
+
+/* Stagger animation for product cards */
+.grid > div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.grid > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.grid > div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.grid > div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* ===== FEATURE BOXES ===== */
+.bg-blue-50,
+.bg-green-50,
+.bg-yellow-50 {
+    animation: slideInUp 0.6s ease;
+}
+
+.bg-blue-50:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.bg-blue-50:nth-child(2),
+.bg-green-50:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bg-blue-50:nth-child(3),
+.bg-yellow-50:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.rounded-full {
+    animation: rotate 0.8s ease;
+}
+
+/* ===== BUTTONS ===== */
+button {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CART BADGE ===== */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.3s ease;
+}
+
+.cart-badge.pulse-animation {
+    animation: pulse 0.6s ease;
+}
+
+/* ===== MOBILE MENU ===== */
+#mobile-menu {
+    animation: slideInDown 0.3s ease;
+}
+
+/* ===== STATS SECTION ===== */
+.text-3xl.font-bold {
+    animation: pulse 2s infinite;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    animation: slideInUp 0.6s ease;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    transform: translateX(5px);
+    color: #60a5fa !important;
+}
+
+/* ===== TRANSITIONS & EFFECTS ===== */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== SECTION HEADINGS ===== */
+h2 {
+    animation: slideInUp 0.6s ease;
+}
+
+h3 {
+    animation: slideInUp 0.6s ease 0.1s both;
+}
+
+/* ===== INPUT FIELDS ===== */
+input {
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ===== ICONS ===== */
+i {
+    transition: all 0.3s ease;
+}
+
+.fa-cart-plus {
+    animation: bounce 0.6s ease;
+}
+
+/* ===== HOVER EFFECTS FOR LISTS ===== */
+ul li {
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    h2 {
+        animation: slideInUp 0.5s ease;
+    }
+    
+    .product-card {
+        animation: scaleIn 0.4s ease;
+    }
+}
+.moul-regular {
+  font-family: "Moul", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.noto-serif-khmer{
+  font-family: "Noto Serif Khmer", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
